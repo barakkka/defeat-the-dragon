@@ -91,6 +91,12 @@ body {
   height: 30px;
   border: 1px solid black;
   margin: 10px auto 0 auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+#innerOne p {
+  width: 33%;
 }
 #innerTwo {
   height: fit-content;
@@ -169,12 +175,6 @@ button {
   }
 }
 
-@media screen and (width <= 670px) {
-  #outer{
-    width: 400px;
-  }
-}
-
 #developerDiv {
   text-align: center;
   color: white;
@@ -186,6 +186,5 @@ button {
 #developer {
   color: var(--orange);
 }
-
 
 /* ------CSS LOOKS GOOD------- */
