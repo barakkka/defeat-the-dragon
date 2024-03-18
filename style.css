@@ -1,0 +1,188 @@
+:root {
+  --primary: rgb(10, 10, 35);
+  --orange: rgb(254, 195, 69);
+  --dark-orange: rgb(224, 165, 39);
+}
+html {
+  font-family: Arial, Helvetica, sans-serif;
+}
+body {
+  background-color: var(--primary);
+  overflow: hidden;
+}
+
+#one {
+  margin-top: 14rem;
+  transform: scale(1.2);
+  transition: transform 0.5s ease-in-out;
+}
+
+.outer {
+  background-color: white;
+  width: 450px;
+  height: fit-content;
+  min-height: 150px;
+  margin: auto;
+  position: relative;
+  border: 5px solid blue;
+  border-radius: 15px;
+  transition: box-shadow 0.3s ease-in-out;
+}
+.outer:hover {
+  box-shadow: 0 0 10px 0 blue;
+}
+.redbox {
+  border: 5px solid red;
+  box-shadow: 0 0 15px 0 red;
+}
+.redbox:hover {
+  animation: pulse 1s ease-in-out infinite;
+}
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 15px 0 red;
+  }
+  50% {
+    box-shadow: 0 0 0px 0 red;
+  }
+  100% {
+    box-shadow: 0 0 15px 0 red;
+  }
+}
+.gradient {
+  animation: color 4s ease-in-out infinite, shadow 4s ease-in-out infinite;
+}
+@keyframes color {
+  0% {
+    border: 5px solid blue;
+  }
+  25% {
+    border: 5px solid orange;
+  }
+  50% {
+    border: 5px solid green;
+  }
+  75% {
+    border: 5px solid rgb(255, 0, 255);
+  }
+  100% {
+    border: 5px solid blue;
+  }
+}
+@keyframes shadow {
+  0% {
+    box-shadow: 0 0 10px blue;
+  }
+  25% {
+    box-shadow: 0 0 10px orange;
+  }
+  50% {
+    box-shadow: 0 0 10px green;
+  }
+  75% {
+    box-shadow: 0 0 10px rgb(255, 0, 255);
+  }
+  100% {
+    box-shadow: 0 0 10px blue;
+  }
+}
+#innerOne {
+  width: 100%;
+  height: 30px;
+  border: 1px solid black;
+  margin: 10px auto 0 auto;
+}
+#innerTwo {
+  height: fit-content;
+  min-height: 100px;
+  width: 430px;
+  border: 1px solid black;
+  margin: auto;
+}
+#innerThree {
+  background-color: var(--primary);
+  height: fit-content;
+  min-height: 70px;
+  width: 100%;
+}
+button {
+  height: 22px;
+  font-size: 11px;
+  margin: 3px;
+  background-color: var(--orange);
+  border: 2px solid var(--dark-orange);
+}
+.hiddenGem {
+  animation: hidden 6s ease-in-out infinite;
+}
+@keyframes hidden {
+  0% {
+    box-shadow: 0 0 0 var(--orange);
+  }
+  15% {
+    box-shadow: 0 0 10px 2px orangered;
+  }
+  25% {
+    box-shadow: 0 0 0 var(--orange);
+  }
+}
+#text {
+  font-size: 12px;
+  color: white;
+  padding: 5px;
+}
+#monsterStats {
+  width: 100%;
+  height: 22px;
+  background-color: red;
+  margin-left: 0px;
+  visibility: hidden;
+  position: absolute;
+}
+#monsterNameText,
+#monsterHealthText {
+  color: white;
+  font-size: 13px;
+}
+#wasted {
+  z-index: -1;
+  position: absolute;
+  left: 135px;
+  font-size: larger;
+  font-weight: bold;
+  bottom: 90px;
+  color: red;
+  text-shadow: 0 0 20px red;
+}
+.wastedClass {
+  animation: bounce 1s ease;
+}
+@keyframes bounce {
+  0% {
+    bottom: 90px;
+  }
+  50% {
+    bottom: 170px;
+  }
+  100% {
+    bottom: 90px;
+  }
+}
+
+@media screen and (width <= 670px) {
+  #one {
+    transform: scale(1);
+  }
+}
+
+#developerDiv {
+  text-align: center;
+  color: white;
+  margin-top: 2rem;
+}
+#developerDiv p {
+  margin: 0;
+}
+#developer {
+  color: var(--orange);
+}
