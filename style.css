@@ -170,8 +170,8 @@ button {
 }
 
 @media screen and (width <= 670px) {
-  #one {
-    transform: scale(1);
+  #outer{
+    width: 400px;
   }
 }
 
