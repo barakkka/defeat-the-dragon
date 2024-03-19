@@ -14,7 +14,7 @@ body {
 #one {
   margin-top: 14rem;
   transform: scale(1.2);
-  transition: transform 0.5s ease-in-out;
+  transition: transform 1s ease-in-out;
 }
 
 .outer {
@@ -185,6 +185,13 @@ button {
 }
 #developer {
   color: var(--orange);
+}
+
+
+@media screen and (width <= 650px) {
+  #one{
+    transform: scale(1);
+  }
 }
 
 /* ------CSS LOOKS GOOD------- */
